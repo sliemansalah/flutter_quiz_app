@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-// void main () {
-//   runApp(MyApp());
-// }
-
+// shift + alt + f to format document
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
@@ -16,6 +12,7 @@ class MyApp extends StatelessWidget {
         'My First App',
       )),
       body: Text('This is my default text'),
+      Text('Second text') // not true.
     ));
   }
 }
