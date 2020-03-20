@@ -51,6 +51,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
+              backgroundColor: Colors.red,
                 title: Text(
               'My First App',
             )),
