@@ -13,16 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _qusetionIndex = 0;
-
-  void _answerQustion() {
-    setState(() {
-      _qusetionIndex = _qusetionIndex + 1;
-    });
-    print(_qusetionIndex);
-  }
-
-  Widget build(BuildContext context) {
-    var questions = [
+  final questions = const [ // use const questions
       {
         'questionText': 'What\'s your favourite color?',
         'answers': ['Black', 'Red', 'Green', 'White'],
@@ -36,6 +27,17 @@ class _MyAppState extends State<MyApp> {
         'answers': ['Max', 'Max', 'Max', 'Max'],
       }
     ];
+  void _answerQustion() {
+    setState(() {
+      _qusetionIndex = _qusetionIndex + 1;
+    });
+    print(_qusetionIndex);
+     if(_qusetionIndex < questions.length) {
+      print("We have more questions");
+    }
+  }
+
+  Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(

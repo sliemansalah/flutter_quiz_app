@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Question extends StatelessWidget {
-  final String questionText; // final as never changed
+  final String questionText; // final as never changed on code mode but changed on run mode
   Question(this.questionText);
   Widget build(BuildContext context) {
     return Container(
