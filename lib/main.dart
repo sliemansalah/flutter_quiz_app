@@ -3,9 +3,18 @@ import 'package:flutter/material.dart';
 // shift + alt + f to format document
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+class MyAppState extends State<MyApp> {
+  var qusetionIndex = 0;
 
   void answerQustions() {
+    setState((){
+      qusetionIndex=qusetionIndex+1;
+    });  
     print('answer chosen');
   }
 
@@ -21,7 +30,7 @@ class MyApp extends StatelessWidget {
               'My First App',
             )),
             body: Column(children: [
-              Text(questions[1]),
+              Text(questions[qusetionIndex]),
               RaisedButton(
                 child: Text('Answer 1'),
                 onPressed: answerQustions,
