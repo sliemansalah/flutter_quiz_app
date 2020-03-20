@@ -13,7 +13,7 @@ class MyAppState extends State<MyApp> {
 
   void answerQustions() {
     setState((){
-      qusetionIndex=qusetionIndex+1;
+      qusetionIndex>1?qusetionIndex=0:qusetionIndex+=1;
     });  
     print('answer chosen');
   }
